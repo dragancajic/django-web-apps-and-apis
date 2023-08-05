@@ -7,8 +7,8 @@ def index(request):
     #return None
 
     # return HttpResponse OBJECT or Error!
-    return HttpResponse("""
-<!DOCTYPE html>
+    return HttpResponse(
+"""<!DOCTYPE html>
 <html>
     <body>
         <h1>This is my Blog!</h1>
