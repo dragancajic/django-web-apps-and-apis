@@ -7,4 +7,14 @@ def index(request):
     #return None
 
     # return HttpResponse OBJECT or Error!
-    return HttpResponse("This is my blog!")
+    return HttpResponse("""
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>This is my Blog!</h1>
+        <p>Welcome to <em>my blog</em>!</p>
+        <p>If you want, learn more about me
+            <a href="https://learn-pisio.eu5.org/" target="_blank">here</a>
+        </p>
+    </body>
+</html>""")
