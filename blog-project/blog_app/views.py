@@ -8,12 +8,12 @@ def index(request):
     # in views you can put some logic,
     # e.g. make a call to the database ;-)
 
-    # posts - query object that contains all posts pulled from the database
+    # posts - query set object that contains all posts pulled from the database
     posts = Post.objects.all()
     print(posts)
 
-    # create context dictionary to fill with query object values
-    # context_dict = {'key': query_object}
+    # create context dictionary to fill with query set object values
+    # context_dict = {'key': query_set_object}
     context = {'posts': posts}
 
     for key, value in context.items():
