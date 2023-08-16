@@ -23,3 +23,7 @@ def index(request):
     return render(request, 'blog_app/index.html', context)
 
     # Now, `index` template has access to the information saved into context dictionary.
+
+def detail(request, pk):
+    context = {'pk': pk}
+    return render(request, 'blog_app/detail.html', context)
