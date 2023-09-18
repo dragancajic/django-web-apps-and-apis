@@ -24,6 +24,16 @@ def index(request):
 
     # Now, `index` template has access to the information saved into context dictionary.
 
+
+# -------------------------------------------------------------------- #
+# ~ Visual Studio Code: Keyboard shortcuts for Linux                   #
+# https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf #
+#                                                                      #
+# Ctrl+Shift+E | Show Explorer / Toggle focus √ ;-)                    #
+# -------------------------------------------------------------------- #
+
 def detail(request, pk):
-    context = {'pk': pk}
+    # Database Query (same as in Django Shell!)
+    post = Post.objects.get(pk=pk)
+    context = {'post': post}
     return render(request, 'blog_app/detail.html', context)
